@@ -8,4 +8,7 @@
     <string name="Guide_tab">Guides</string>
     <string name="Jump_roulette_tab">Jump Roulette</string>
     <string name="title_activity_roulette_wheel">roulette_wheel</string>
+    <string name="description_whole_map">fortnite map main</string>
+    <string name="description_roulette_button">button used to activate roulette for jump</string>
+    <string name="button_roulettewheel">JUMP!!!</string>
 </resources>
