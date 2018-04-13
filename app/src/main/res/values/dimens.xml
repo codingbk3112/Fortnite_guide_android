@@ -6,4 +6,6 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">4dp</dimen>
     <dimen name="dp_1">1dp</dimen>
+    <dimen name="fragment_top_margin">16dp</dimen>
+    <dimen name="button_distance_apart_equiptment_fragment">16dp</dimen>
 </resources>

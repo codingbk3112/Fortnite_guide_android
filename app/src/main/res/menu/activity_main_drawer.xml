@@ -17,8 +17,6 @@
             android:icon="@drawable/ic_menu_parachutist"
             android:title="@string/Jump_roulette_tab" />
 
-        //add new navigation menu options here
-
     </group>
 
 

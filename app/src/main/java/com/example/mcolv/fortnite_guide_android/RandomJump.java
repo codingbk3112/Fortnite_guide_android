@@ -43,13 +43,9 @@ public class RandomJump extends Fragment {
 
 
 
-
-            // code for roulette button
-            final Button jump_button = view.findViewById(R.id.Roulette_button);
-            jump_button.setOnClickListener(new View.OnClickListener() {
+            fortnite_map_imgview.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
-                    jump_button.setEnabled(false);
                     buttonvibe.vibrate(50);
 
                     land_zone dropspot = land_spots.get_random_zone();
@@ -62,7 +58,6 @@ public class RandomJump extends Fragment {
                     Toast.makeText(context,dropspot.get_title(),Toast.LENGTH_LONG).show();
 
 
-                    jump_button.setEnabled(true);
 
                 }
             });

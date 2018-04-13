@@ -83,11 +83,11 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment=null;
 
         if (id == R.id.Equipment_menu) {
-
+            fragment= new Equipment();
         }else if (id == R.id.random_wheel) {
             fragment = new RandomJump();
         }else if (id == R.id.guides) {
-
+            ;
         }else if (id == R.id.share) {
 
         }
