@@ -12,4 +12,13 @@
     <string name="description_roulette_button">button used to activate roulette for jump</string>
     <string name="button_roulettewheel">JUMP!!!</string>
     <string name="fortnite_map">fortnight map picture super high quality</string>
+    <string name="Assault_Rifles_button_name">Assault Rifles</string>
+    <string name="Shotgun_button_name">Shotguns</string>
+    <string name="Pistol_button_name">Pistols</string>
+    <string name="Explosives_button_name">Explosives</string>
+    <string name="Snipers_button_name">Snipers</string>
+    <string name="Healing_button_name">Healing</string>
+    <string name="Utilities_button_name">Utilities</string>
+
+
 </resources>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3a3a3a</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#1c1c1c</color>
     <color name="colorAccent">#ff66d9</color>
     <color name="colorText">#e3e3e3</color>
     <color name="colorIcon">#e3e3e3</color>
     <color name="colorTransparent">#00000000</color>
+    <color name="colorfortniteblue">#4286f4</color>
 </resources>
