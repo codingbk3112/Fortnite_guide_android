@@ -1,6 +1,5 @@
-60 35 JunkJunction
-60 77 HauntedHills
-101 116 PleasantPark
-180 75 AnarchyAcres
-50 20 "50,20"
-0 0 "0,0"
+60 20 JunkJunction
+55 62 HauntedHills
+101 125 PleasantPark
+180 80 AnarchyAcres
+
