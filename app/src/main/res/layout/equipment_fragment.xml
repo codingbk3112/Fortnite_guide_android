@@ -1,5 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"></FrameLayout>
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageButton
+        android:id="@+id/assaultrifle_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginStart="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/fragment_top_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/assultrifle" />
+
+    <ImageButton
+        android:id="@+id/shotgun_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginEnd="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/fragment_top_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shotgun" />
+
+    <ImageButton
+        android:id="@+id/pistol_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginStart="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/button_distance_apart_equiptment_fragment"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assaultrifle_Button"
+        app:srcCompat="@drawable/pistol" />
+
+    <ImageButton
+        android:id="@+id/sniper_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginEnd="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/button_distance_apart_equiptment_fragment"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shotgun_Button"
+        app:srcCompat="@drawable/sniper" />
+
+    <ImageButton
+        android:id="@+id/bandages_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginStart="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/button_distance_apart_equiptment_fragment"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pistol_Button"
+        app:srcCompat="@drawable/bandages" />
+
+    <ImageButton
+        android:id="@+id/utilities_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginEnd="@dimen/equipment_screen_image_distance_from_left_right_walls"
+        android:layout_marginTop="@dimen/button_distance_apart_equiptment_fragment"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sniper_Button"
+        app:srcCompat="@drawable/utilities" />
+
+    <ImageButton
+        android:id="@+id/explosives_Button"
+        android:layout_width="@dimen/equipment_screen_image_width_and_height"
+        android:layout_height="@dimen/equipment_screen_image_width_and_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/button_distance_apart_equiptment_fragment"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:text="EXPLOSIVES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bandages_Button"
+        app:srcCompat="@drawable/utilities" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Assault_Rifles_button_name"
+        app:layout_constraintBottom_toBottomOf="@+id/assaultrifle_Button"
+        app:layout_constraintEnd_toEndOf="@+id/assaultrifle_Button"
+        app:layout_constraintStart_toStartOf="@+id/assaultrifle_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Shotgun_button_name"
+        app:layout_constraintBottom_toBottomOf="@+id/shotgun_Button"
+        app:layout_constraintEnd_toEndOf="@id/shotgun_Button"
+        app:layout_constraintStart_toStartOf="@id/shotgun_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Pistol_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/pistol_Button"
+        app:layout_constraintEnd_toEndOf="@id/pistol_Button"
+        app:layout_constraintStart_toStartOf="@id/pistol_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Snipers_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/sniper_Button"
+        app:layout_constraintEnd_toEndOf="@id/sniper_Button"
+        app:layout_constraintStart_toStartOf="@id/sniper_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Healing_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/bandages_Button"
+        app:layout_constraintEnd_toEndOf="@id/bandages_Button"
+        app:layout_constraintStart_toStartOf="@id/bandages_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Explosives_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/explosives_Button"
+        app:layout_constraintEnd_toEndOf="@id/explosives_Button"
+        app:layout_constraintStart_toStartOf="@id/explosives_Button" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/Utilities_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/utilities_Button"
+        app:layout_constraintEnd_toEndOf="@id/utilities_Button"
+        app:layout_constraintStart_toStartOf="@id/utilities_Button" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

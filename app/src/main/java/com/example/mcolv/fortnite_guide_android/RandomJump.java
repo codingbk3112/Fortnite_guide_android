@@ -2,6 +2,7 @@ package com.example.mcolv.fortnite_guide_android;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
@@ -83,7 +84,10 @@ public class RandomJump extends Fragment {
         a = new TranslateAnimation(0,x-old_x,0,y-old_y);//from current location to new
         a.setFillAfter(false);
         a.setFillEnabled(false);
-        a.setDuration(1000);
+        if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            a.setDuration(1000);
+        }
+        else{a.setDuration(0);}
         marker.startAnimation(a);
 
         a.setAnimationListener(new TranslateAnimation.AnimationListener(){
@@ -104,8 +108,9 @@ public class RandomJump extends Fragment {
                 marker.setX(x);
                 marker.setY(y);
 
-                buttonsound.start();
-
+                if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+                    buttonsound.start();
+                }
 
 
             }

@@ -7,5 +7,7 @@
     <dimen name="fab_margin">4dp</dimen>
     <dimen name="dp_1">1dp</dimen>
     <dimen name="fragment_top_margin">16dp</dimen>
-    <dimen name="button_distance_apart_equiptment_fragment">16dp</dimen>
+    <dimen name="button_distance_apart_equiptment_fragment">0dp</dimen>
+    <dimen name="equipment_screen_image_width_and_height">120dp</dimen>
+    <dimen name="equipment_screen_image_distance_from_left_right_walls">55dp</dimen>
 </resources>
