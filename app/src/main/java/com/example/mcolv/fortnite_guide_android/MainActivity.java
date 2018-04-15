@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        requestAppPermissions();
+        //requestAppPermissions();
     }
 
     @Override
@@ -73,22 +73,28 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+    Fragment fragment=null;
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        Fragment fragment=null;
+        switch (item.getItemId()){
 
-        if (id == R.id.Equipment_menu) {
-            fragment= new Equipment();
-        }else if (id == R.id.random_wheel) {
-            fragment = new RandomJump();
-        }else if (id == R.id.guides) {
-            ;
-        }else if (id == R.id.share) {
+            case R.id.Equipment_menu :
+                fragment= new Equipment();
+                break;
+            case R.id.random_wheel :
+                fragment = new RandomJump();
+                break;
+            case R.id.guides :
+
+                break;
+            case R.id.share :
+
+                break;
+
 
         }
 
@@ -99,11 +105,11 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    /*
     private void requestAppPermissions() {
         if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             return;
@@ -152,6 +158,6 @@ public class MainActivity extends AppCompatActivity
             // other 'case' lines to check for other
             // permissions this app might request
         }
-    }
+    }*/
 }
 
