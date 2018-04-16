@@ -1,59 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Shotgun">
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <ImageButton
-        android:id="@+id/Pump_Shotgun_button"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="1dp"
-        android:layout_marginEnd="2dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/Shotgun_button_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/shotgun"
-        app:layout_constraintBottom_toTopOf="@+id/Tactical_Shotgun_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
-    <ImageButton
-        android:id="@+id/Heavy_Shotgun_button"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="2dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/shotgun"
-        android:contentDescription="@string/Shotgun_button_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tactical_Shotgun_button"
-        app:layout_editor_absoluteX="0dp"
-        app:layout_editor_absoluteY="401dp" />
-
-    <ImageButton
-        android:id="@+id/Tactical_Shotgun_button"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:contentDescription="@string/Shotgun_button_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/shotgun"
-        app:layout_constraintBottom_toTopOf="@+id/Heavy_Shotgun_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pump_Shotgun_button"
-        app:layout_editor_absoluteX="0dp"
-        app:layout_editor_absoluteY="201dp" />
-</android.support.constraint.ConstraintLayout>
-
+</LinearLayout>
