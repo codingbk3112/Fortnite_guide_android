@@ -17,6 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //WebView chestmap = findViewById(R.id.chestmap);
+        //chestmap.getSettings().setJavaScriptEnabled(true);
+        //chestmap.loadUrl("http://www.fortnitechests.info");
+        //setContentView(chestmap);
 
         //requestAppPermissions();
     }
