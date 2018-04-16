@@ -1,12 +1,7 @@
-60 20  JunkJunction
-55 62   HauntedHills
+60 20 JunkJunction
+55 62 HauntedHills
 101 125 PleasantPark
-180 70  AnarchyAcres
-230 60  Wailing Woods
-155 85  Loot Lake
-195 92  Dusty Depot
-220 100 Retail Row
-245 90  Lonely Lodge
-200 60  Tomato Town
+180 70 AnarchyAcres
+230 60 Wailing Woods
 
 
