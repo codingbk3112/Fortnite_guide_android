@@ -19,7 +19,7 @@ import android.widget.Toast;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Equipment extends ListFragment  {
+public class AssaultRifle extends ListFragment  {
 
 
 
@@ -27,28 +27,20 @@ public class Equipment extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.equipment_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        View rootview = inflater.inflate(R.layout.fragment_assaultrifle,container, false);  // replace with your layout xml
+        //look at equipment_fragment.xml yours will be a copy
 
         String[] titles = {
                 "Assault Rifle",   //your menu titles
-                "Sniper",
-                "Shotgun",
-                "SMG",
-                "Pistol",
-                "Explosives",
-                "Healing",
-                "Utilities"
+                "Burst Rife",
+                "Scoped Rife",
+                "Scar"
         };
         Integer[] imagesids = {
                 R.drawable.assaultrifle, // your links to drawables jish is working on
-                R.drawable.sniper,
-                R.drawable.shotgun,
-                R.drawable.smg,
-                R.drawable.pistol,
-                R.drawable.explosives,
-                R.drawable.bandages,
-                R.drawable.utilities
+                R.drawable.m16,
+                R.drawable.assaultrifle,
+                R.drawable.assaultrifle,
         };
 
         ArrayAdapter<String> adapter = new EquiptmentListsAdapter(getContext(),titles,imagesids); //same call here
@@ -63,28 +55,40 @@ public class Equipment extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
+        Fragment assaultRifle_menu = null;
 
         switch (position){
 
             case 0:
                 Toast.makeText(getContext(),"item1",Toast.LENGTH_LONG).show();
-                //first item in list link to press this will eventually launch your fragment
+                //assault rifle launch
+                assaultRifle_menu = new assaultrifle_m16();
                 break;
+
             case 1:
-                //launch sniper fragment
                 Toast.makeText(getContext(),"item2",Toast.LENGTH_LONG).show();
+                //burst rifle launch
+                assaultRifle_menu = new burst_rifle();
                 break;
+
             case 2:
-                gunmenu= new Shotgun();
-                //launch shotgun fragment
                 Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
+                //scoped rifle launch
+                assaultRifle_menu = new scoped_rifle();
+                break;
+
+            case 3:
+                Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
+                //scar rifle launch
+                assaultRifle_menu = new Scar();
+                break;
         }
 
-        if(gunmenu!=null){
+        if(assaultRifle_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.screen_area,gunmenu);
-            fragmentTransaction.addToBackStack("gun_fragment");
+            fragmentTransaction.replace(R.id.screen_area,assaultRifle_menu);
+            fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }
 
@@ -97,13 +101,13 @@ public class Equipment extends ListFragment  {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-     super.onViewCreated(view, savedInstanceState);
+        super.onViewCreated(view, savedInstanceState);
 
 
 
 
     }
-    
+
 
 
 
