@@ -84,15 +84,16 @@ public class Equipment extends ListFragment  {
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.screen_area,gunmenu);
+            fragmentTransaction.addToBackStack("gun_fragment");
             fragmentTransaction.commit();
         }
 
 
 
 
-
         super.onListItemClick(l, v, position, id);
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -102,6 +103,7 @@ public class Equipment extends ListFragment  {
 
 
     }
+    
 
 
 

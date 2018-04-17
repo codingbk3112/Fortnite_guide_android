@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,12 +32,15 @@ public class Shotgun extends ListFragment  {
 
         String[] titles = {
                   //your menu titles
-                "Shotgun"
+                "Pump Shotgun",
+                "Heavy Shotgun",
+                "Tactical Shotgun"
 
         };
         Integer[] imagesids = {
-                R.drawable.shotgun // your links to drawables jish is working on
-
+                R.drawable.shotgun, // your links to drawables jish is working on
+                R.drawable.heavyshotgun,
+                R.drawable.taticalshotgun
         };
 
         ArrayAdapter<String> adapter = new EquiptmentListsAdapter(getContext(),titles,imagesids); //same call here
@@ -49,12 +55,14 @@ public class Shotgun extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
+        Fragment shotgun_menu=null;
 
         switch (position){
 
             case 0:
                 Toast.makeText(getContext(),"item1",Toast.LENGTH_LONG).show();
-                //first item in list link to press this will eventually launch your fragment
+                //launch pump shotgun fragment
+                shotgun_menu = new pump_shotgun();
                 break;
             case 1:
                 //launch sniper fragment
@@ -64,6 +72,13 @@ public class Shotgun extends ListFragment  {
                 //launch shotgun fragment
                 Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
         }
+        if(shotgun_menu!=null){
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.screen_area,shotgun_menu);
+            fragmentTransaction.addToBackStack("shotgun_fragment");
+            fragmentTransaction.commit();
+        }
 
 
 
@@ -71,6 +86,8 @@ public class Shotgun extends ListFragment  {
 
         super.onListItemClick(l, v, position, id);
     }
+
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
