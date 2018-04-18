@@ -27,7 +27,7 @@ public class Eq_SG extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.Eq_SG,container, false);  // replace with your layout xml
+        View rootview = inflater.inflate(R.layout.eq_sg,container, false);  // replace with your layout xml
         //look at equiptment_fragment.xml yours will be a copy
 
         String[] titles = {
@@ -76,7 +76,7 @@ public class Eq_SG extends ListFragment  {
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.screen_area,shotgun_menu);
-            fragmentTransaction.addToBackStack("Eq_SG");
+            fragmentTransaction.addToBackStack("eq_sg");
             fragmentTransaction.commit();
         }
 
