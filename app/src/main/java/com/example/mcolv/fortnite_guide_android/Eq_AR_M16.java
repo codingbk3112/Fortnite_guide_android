@@ -11,14 +11,14 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class assaultrifle_m16 extends Fragment {
+public class Eq_AR_M16 extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_assaultrifle_m16, container, false);
+        return inflater.inflate(R.layout.Eq_AR_M16, container, false);
     }
 
 }

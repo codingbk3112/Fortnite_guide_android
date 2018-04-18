@@ -19,7 +19,7 @@ import android.widget.Toast;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Equipment extends ListFragment  {
+public class Eq extends ListFragment  {
 
 
 
@@ -27,7 +27,7 @@ public class Equipment extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.equipment_fragment,container, false);  // replace with your layout xml
+        View rootview = inflater.inflate(R.layout.Eq_Fragment,container, false);  // replace with your layout xml
         //look at equiptment_fragment.xml yours will be a copy
 
         String[] titles = {
@@ -51,7 +51,7 @@ public class Equipment extends ListFragment  {
                 R.drawable.utilities
         };
 
-        ArrayAdapter<String> adapter = new EquiptmentListsAdapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
         setListAdapter(adapter);
 
         return rootview;
@@ -75,7 +75,7 @@ public class Equipment extends ListFragment  {
                 Toast.makeText(getContext(),"item2",Toast.LENGTH_LONG).show();
                 break;
             case 2:
-                gunmenu= new Shotgun();
+                gunmenu= new Eq_SG();
                 //launch shotgun fragment
                 Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
         }

@@ -12,18 +12,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class EquiptmentListsAdapter extends ArrayAdapter<String> {
+public class Eq_Adapter extends ArrayAdapter<String> {
 
     private final Context mcontext;  // where tasking is happening
     private final String[] titles;     // titles for the elements of list
     private final Integer[] drawids;    // id for the drawables
 
-    //for layout element example see equiptment_fragment_list_element.xml
-
-
-
-    public EquiptmentListsAdapter(Context context, String[]titles, Integer[]drawid){ //constructor which you will pass to
-        super(context,R.layout.equiptment_fragment_list_element,titles);{
+    //for layout element example see Eq_lists_element.xmlq_Adapter(Context context, String[]titles, Integer[]drawid){ //constructor which you will pass to
+        super(context,R.layout.Eq_lists_element,titles);{
 
         this.mcontext=context;
         this.titles=titles;
@@ -41,7 +37,7 @@ public class EquiptmentListsAdapter extends ArrayAdapter<String> {
 
         if(convertView == null) {
             LayoutInflater inflater= ((Activity)mcontext).getLayoutInflater();
-            convertView=inflater.inflate(R.layout.equiptment_fragment_list_element,parent,false);
+            convertView=inflater.inflate(R.layout.Eq_lists_element,parent,false);
             holder = new ViewHolder();
             holder.txt = convertView.findViewById(R.id.equiptment_element_txt);
             holder.img = convertView.findViewById(R.id.equiptment_element_img);
