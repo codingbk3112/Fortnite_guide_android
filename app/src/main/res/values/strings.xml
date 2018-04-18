@@ -21,5 +21,8 @@
     <string name="Utilities_button_name">Utilities</string>
     <string name="Smg_button_name">SMGs</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

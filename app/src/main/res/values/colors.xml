@@ -7,4 +7,5 @@
     <color name="colorIcon">#e3e3e3</color>
     <color name="colorTransparent">#00000000</color>
     <color name="colorfortniteblue">#4286f4</color>
+    <color name="colorfortabledivider">#000000</color>
 </resources>

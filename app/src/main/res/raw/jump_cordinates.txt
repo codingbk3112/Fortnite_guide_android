@@ -1,7 +1,5 @@
-60 20 JunkJunction
-55 62 HauntedHills
-101 125 PleasantPark
-180 70 AnarchyAcres
-230 60 WailingWoods
-50 20 "50,20"
-0 0 "0,0"
+64 22 Junk_Junction
+52 56 Haunted_Hills
+97 92 Pleasant_Park
+180 62 Anarchy_Acres
+152 113 Loot_Lake

@@ -7,7 +7,7 @@
         android:id="@+id/equiptment_element_img"
         android:layout_width="@dimen/equipment_screen_images_width_and_height"
         android:layout_height="@dimen/equipment_screen_images_width_and_height"
-        android:src="@drawable/assultrifle"
+        android:src="@drawable/assaultrifle"
         android:layout_gravity="center"
         />
     <TextView

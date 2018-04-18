@@ -47,6 +47,7 @@ public class RandomJump extends Fragment {
             fortnite_map_imgview.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
+
                     buttonvibe.vibrate(50);
 
                     land_zone dropspot = land_spots.get_random_zone();
@@ -54,9 +55,11 @@ public class RandomJump extends Fragment {
 
 
                     dropspot = land_spots.get_random_zone();
-                    animate_marker(mapMarker, dropspot.get_x(), dropspot.get_y(),context); // x and y given in dp
 
                     Toast.makeText(context,dropspot.get_title(),Toast.LENGTH_LONG).show();
+                    animate_marker(mapMarker, dropspot.get_x(), dropspot.get_y(),context); // x and y given in dp
+
+
 
 
 
@@ -84,10 +87,9 @@ public class RandomJump extends Fragment {
         a = new TranslateAnimation(0,x-old_x,0,y-old_y);//from current location to new
         a.setFillAfter(false);
         a.setFillEnabled(false);
-        if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+
             a.setDuration(1000);
-        }
-        else{a.setDuration(0);}
+
         marker.startAnimation(a);
 
         a.setAnimationListener(new TranslateAnimation.AnimationListener(){
@@ -118,6 +120,9 @@ public class RandomJump extends Fragment {
         });
 
     }
+
+
+
 
 }
 
