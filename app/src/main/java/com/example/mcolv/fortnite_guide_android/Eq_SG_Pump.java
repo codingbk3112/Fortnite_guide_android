@@ -31,7 +31,7 @@ public class Eq_SG_Pump extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         ImageView gunpic = view.findViewById(R.id.pic_above_table);
-        gunpic.setImageResource(R.drawable.shotgun);                //sets the shotgun as the picture
+        gunpic.setImageResource(R.drawable.sg_pump);                //sets the sg_pump as the picture
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
         TableEditor editor = new TableEditor(statTable,getContext());

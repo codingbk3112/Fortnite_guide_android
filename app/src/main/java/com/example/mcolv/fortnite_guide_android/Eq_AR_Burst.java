@@ -22,14 +22,14 @@ public class Eq_AR_Burst extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.eq_lists_element, container, false);
+        return inflater.inflate(R.layout.eq_last_screen_template, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         ImageView gunpic = view.findViewById(R.id.pic_above_table);
-        gunpic.setImageResource(R.drawable.ar_scar);                //sets the shotgun as the picture
+        gunpic.setImageResource(R.drawable.ar_scar);                //sets the sg_pump as the picture
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit

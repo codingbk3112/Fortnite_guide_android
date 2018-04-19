@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 
@@ -42,13 +41,13 @@ public class Eq extends ListFragment  {
         };
         Integer[] imagesids = {
                 R.drawable.ar_scar, // your links to drawables jish is working on
-                R.drawable.sniper,
-                R.drawable.shotgun,
-                R.drawable.smg,
-                R.drawable.pistol,
-                R.drawable.explosives,
-                R.drawable.bandages,
-                R.drawable.utilities
+                R.drawable.snipe_bolt,
+                R.drawable.sg_pump,
+                R.drawable.smg_tatical,
+                R.drawable.pistol_basic,
+                R.drawable.explode_rpg,
+                R.drawable.heal_bandage,
+                R.drawable.util_launchpad
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -70,12 +69,19 @@ public class Eq extends ListFragment  {
                 gunmenu = new Eq_AR();
                 break;
             case 1:
-                //launch sniper fragment
-
+                gunmenu = new Eq_Snipe();
                 break;
             case 2:
                 gunmenu= new Eq_SG();
-
+                break;
+            case 3:
+                gunmenu = new Eq_SMG();
+                break;
+            case 4:
+                gunmenu = new Eq_Pistol();
+                break;
+            default:
+                gunmenu=null;
         }
 
         if(gunmenu!=null){

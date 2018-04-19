@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 
@@ -38,7 +37,7 @@ public class Eq_SG extends ListFragment  {
 
         };
         Integer[] imagesids = {
-                R.drawable.shotgun, // your links to drawables jish is working on
+                R.drawable.sg_pump, // your links to drawables jish is working on
                 R.drawable.sg_heavy,
                 R.drawable.sg_tatical
         };
