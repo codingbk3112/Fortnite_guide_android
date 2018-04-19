@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pic_above_table"
         android:layout_width="match_parent"
         android:layout_height="292dp"
         android:layout_marginEnd="8dp"
@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/stat_table"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:stretchColumns="*"
@@ -52,24 +53,6 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" UC "
-                android:textColor="@color/table_text_color" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" R "
-                android:textColor="@color/table_text_color" />
 
 
         </TableRow>
@@ -96,24 +79,7 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 
@@ -133,24 +99,7 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 
@@ -170,24 +119,7 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 
@@ -207,24 +139,6 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 
@@ -244,24 +158,6 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 
@@ -281,24 +177,6 @@
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:background="@color/weapon_green"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/table_divider_thickness"
-                android:layout_marginLeft="@dimen/table_divider_thickness"
-                android:background="@color/weapon_blue"
-                android:gravity="center"
-                android:text=" 000 "
-                android:textColor="@color/table_text_color" />
 
         </TableRow>
 

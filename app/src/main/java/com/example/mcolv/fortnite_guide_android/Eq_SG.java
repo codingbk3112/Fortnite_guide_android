@@ -60,17 +60,15 @@ public class Eq_SG extends ListFragment  {
         switch (position){
 
             case 0:
-                Toast.makeText(getContext(),"item1",Toast.LENGTH_LONG).show();
-                //launch pump shotgun fragment
                 shotgun_menu = new Eq_SG_Pump();
                 break;
             case 1:
-                //launch sniper fragment
-                Toast.makeText(getContext(),"item2",Toast.LENGTH_LONG).show();
+
+
                 break;
             case 2:
-                //launch shotgun fragment
-                Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
+
+
         }
         if(shotgun_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

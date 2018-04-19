@@ -60,25 +60,21 @@ public class Eq_AR extends ListFragment  {
         switch (position){
 
             case 0:
-                Toast.makeText(getContext(),"item1",Toast.LENGTH_LONG).show();
                 //assault rifle launch
                 assaultRifle_menu = new Eq_AR_M16();
                 break;
 
             case 1:
-                Toast.makeText(getContext(),"item2",Toast.LENGTH_LONG).show();
                 //burst rifle launch
                 assaultRifle_menu = new Eq_AR_Burst();
                 break;
 
             case 2:
-                Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
                 //scoped rifle launch
                 assaultRifle_menu = new Eq_AR_Scoped();
                 break;
 
             case 3:
-                Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
                 //scar rifle launch
                 assaultRifle_menu = new Eq_AR_Scar();
                 break;

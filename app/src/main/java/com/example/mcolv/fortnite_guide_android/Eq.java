@@ -67,17 +67,15 @@ public class Eq extends ListFragment  {
         switch (position){
 
             case 0:
-                Toast.makeText(getContext(),"item1",Toast.LENGTH_LONG).show();
-                //first item in list link to press this will eventually launch your fragment
+                gunmenu = new Eq_AR();
                 break;
             case 1:
                 //launch sniper fragment
-                Toast.makeText(getContext(),"item2",Toast.LENGTH_LONG).show();
+
                 break;
             case 2:
                 gunmenu= new Eq_SG();
-                //launch shotgun fragment
-                Toast.makeText(getContext(),"item3",Toast.LENGTH_LONG).show();
+
         }
 
         if(gunmenu!=null){
