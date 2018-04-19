@@ -37,10 +37,10 @@ public class Eq_AR extends ListFragment  {
                 "Scar"
         };
         Integer[] imagesids = {
-                R.drawable.assaultrifle, // your links to drawables jish is working on
+                R.drawable.ar_scar, // your links to drawables jish is working on
                 R.drawable.m16,
-                R.drawable.assaultrifle,
-                R.drawable.assaultrifle,
+                R.drawable.ar_scar,
+                R.drawable.ar_scar,
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here

@@ -39,8 +39,8 @@ public class Eq_SG extends ListFragment  {
         };
         Integer[] imagesids = {
                 R.drawable.shotgun, // your links to drawables jish is working on
-                R.drawable.heavyshotgun,
-                R.drawable.taticalshotgun
+                R.drawable.sg_heavy,
+                R.drawable.sg_tatical
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here

@@ -41,7 +41,7 @@ public class Eq extends ListFragment  {
                 "Utilities"
         };
         Integer[] imagesids = {
-                R.drawable.assaultrifle, // your links to drawables jish is working on
+                R.drawable.ar_scar, // your links to drawables jish is working on
                 R.drawable.sniper,
                 R.drawable.shotgun,
                 R.drawable.smg,
