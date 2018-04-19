@@ -12,6 +12,9 @@
     <string name="description_roulette_button">button used to activate roulette for jump</string>
     <string name="button_roulettewheel">JUMP!!!</string>
     <string name="fortnite_map">fortnight map picture super high quality</string>
+
+
+
     <string name="Assault_Rifles_button_name">Assault Rifles</string>
     <string name="Shotgun_button_name">Shotguns</string>
     <string name="Pistol_button_name">Pistols</string>
@@ -21,8 +24,16 @@
     <string name="Utilities_button_name">Utilities</string>
     <string name="Smg_button_name">SMGs</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="table_header"><b><u> Stats </u></b></string>
+    <string name="table_damage"> Damage </string>
+    <string name="table_fire_rate"> Fire Rate </string>
+    <string name="table_head_shot"> Head shot </string>
+    <string name="table_reload_time"> Reload Time </string>
+    <string name="table_Dps"> DPS </string>
+    <string name="table_Mag_size"> Mag Size </string>
+
 
 
 </resources>
