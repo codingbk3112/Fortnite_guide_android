@@ -33,19 +33,48 @@ public class Eq_AR_Burst extends Fragment {
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
-
-        String[] textInColumn = {
-                "UC",      // title for column
-                "111",      //Damage
-                "222",      //Headshot damage
-                "333",      //Fire Rate
-                "444",      //Reload Time
-                "555",      //DPS
-                "777",      //Mag Size
+        //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary
+        String[] textInColumnGy = {
+                "C",      // title for column
+                "27",      //Damage
+                "67.5",      //Headshot damage
+                "4.06",      //Fire Rate
+                "2.9",      //Reload Time
+                "109.7",      //DPS
+                "30",      //Mag Size
 
         };
 
-        editor.add_column(textInColumn,R.color.weapon_blue);
+        editor.add_column(textInColumnGy,R.color.weapon_grey);
+
+
+        String[] textInColumnGr = {
+                "UC",      // title for column
+                "29",      //Damage
+                "72.5",      //Headshot damage
+                "4.06",      //Fire Rate
+                "2.7",      //Reload Time
+                "117.9",      //DPS
+                "30",      //Mag Size
+
+        };
+
+        editor.add_column(textInColumnGr,R.color.weapon_green);
+
+
+
+        String[] textInColumnBl = {
+                "R",      // title for column
+                "30",      //Damage
+                "75",      //Headshot damage
+                "4.06",      //Fire Rate
+                "2.6",      //Reload Time
+                "121.9",      //DPS
+                "30",      //Mag Size
+
+        };
+
+        editor.add_column(textInColumnBl,R.color.weapon_blue);
 
 
         super.onViewCreated(view, savedInstanceState);
