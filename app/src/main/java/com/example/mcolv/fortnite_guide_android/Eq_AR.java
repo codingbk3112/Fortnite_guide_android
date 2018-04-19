@@ -38,7 +38,7 @@ public class Eq_AR extends ListFragment  {
         };
         Integer[] imagesids = {
                 R.drawable.ar_scar, // your links to drawables jish is working on
-                R.drawable.m16,
+                R.drawable.ar_m16,
                 R.drawable.ar_scar,
                 R.drawable.ar_scar,
         };
