@@ -27,7 +27,7 @@ public class Eq_AR extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_ar,container, false);  // replace with your layout xml
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
         //look at eq_fragment.xmlwill be a copy
 
         String[] titles = {

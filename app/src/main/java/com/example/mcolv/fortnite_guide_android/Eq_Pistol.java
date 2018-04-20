@@ -26,7 +26,7 @@ public class Eq_Pistol extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_sg,container, false);  // replace with your layout xml
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
         //look at equiptment_fragment.xml yours will be a copy
 
         String[] titles = {
