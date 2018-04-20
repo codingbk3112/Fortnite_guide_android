@@ -87,6 +87,7 @@ public class Eq extends ListFragment  {
         if(gunmenu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
             fragmentTransaction.replace(R.id.screen_area,gunmenu);
             fragmentTransaction.addToBackStack("gun_fragment");
             fragmentTransaction.commit();

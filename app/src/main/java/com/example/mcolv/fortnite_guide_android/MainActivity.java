@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity
 
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
             fragmentTransaction.replace(R.id.screen_area,fragment);
             fragmentTransaction.addToBackStack("equiptment_fragment");
             fragmentTransaction.commit();
