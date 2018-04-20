@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.Equiptment;
 
 
 import android.os.Bundle;
@@ -15,10 +15,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.mcolv.fortnite_guide_android.R;
+
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_Snipe extends ListFragment  {
+public class Eq_Heal extends ListFragment  {
 
 
 
@@ -26,22 +28,19 @@ public class Eq_Snipe extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                //your menu titles
-                "Bolt Action Sniper",
-                "Semi-auto Sniper",
-                "Hunting Rifle",
-                "Crossbow"
-
+                "Healing stuff",   //your menu titles
+                "   ",
+                "   ",
+                "   "
         };
         Integer[] imagesids = {
-                R.drawable.snipe_bolt, // your links to drawables jish is working on
-                R.drawable.snipe_semiauto,
-                R.drawable.snipe_hunting,
-                R.drawable.snipe_cross
+                R.drawable.heal_bandage, // your links to drawables jish is working on
+                R.drawable.heal_bandage,
+                R.drawable.heal_bandage,
+                R.drawable.heal_bandage,
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -49,44 +48,50 @@ public class Eq_Snipe extends ListFragment  {
 
         return rootview;
     }
-
+    Fragment gunmenu= null;
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment shotgun_menu=null;
+        Fragment assaultRifle_menu = null;
 
         switch (position){
 
             case 0:
-                shotgun_menu = new Eq_SG_Pump();
+                //assault rifle launch
+                assaultRifle_menu = new Eq_AR_M16();
                 break;
+
             case 1:
-
-
+                //burst rifle launch
+                assaultRifle_menu = new Eq_AR_Burst();
                 break;
+
             case 2:
 
+                break;
 
+            case 3:
+
+                break;
         }
-        if(shotgun_menu!=null){
+
+        if(assaultRifle_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(R.id.screen_area,shotgun_menu);
-            fragmentTransaction.addToBackStack("eq_sg");
+            fragmentTransaction.replace(R.id.screen_area,assaultRifle_menu);
+            fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }
 
 
 
 
-
         super.onListItemClick(l, v, position, id);
     }
-
 
 
     @Override
@@ -97,6 +102,7 @@ public class Eq_Snipe extends ListFragment  {
 
 
     }
+
 
 
 

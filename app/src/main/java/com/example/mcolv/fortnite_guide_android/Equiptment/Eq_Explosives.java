@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.Equiptment;
 
 
 import android.os.Bundle;
@@ -15,10 +15,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.mcolv.fortnite_guide_android.R;
+
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq extends ListFragment  {
+public class Eq_Explosives extends ListFragment  {
 
 
 
@@ -26,28 +28,19 @@ public class Eq extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Assault Rifle",   //your menu titles
-                "Sniper",
-                "Shotgun",
-                "SMG",
-                "Pistol",
-                "Explosives",
-                "Healing",
-                "Utilities"
+                "boom boom",   //your menu titles
+                "   ",
+                "   ",
+                "   "
         };
         Integer[] imagesids = {
-                R.drawable.ar_scar, // your links to drawables jish is working on
-                R.drawable.snipe_bolt,
-                R.drawable.sg_pump,
-                R.drawable.smg_tatical,
-                R.drawable.pistol_basic,
-                R.drawable.explode_rpg,
+                R.drawable.explode_rpg, // your links to drawables jish is working on
                 R.drawable.heal_bandage,
-                R.drawable.util_launchpad
+                R.drawable.heal_bandage,
+                R.drawable.heal_bandage,
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -62,34 +55,35 @@ public class Eq extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
+        Fragment assaultRifle_menu = null;
 
         switch (position){
 
             case 0:
-                gunmenu = new Eq_AR();
+                //assault rifle launch
+                assaultRifle_menu = new Eq_AR_M16();
                 break;
+
             case 1:
-                gunmenu = new Eq_Snipe();
+                //burst rifle launch
+                assaultRifle_menu = new Eq_AR_Burst();
                 break;
+
             case 2:
-                gunmenu= new Eq_SG();
+
                 break;
+
             case 3:
-                gunmenu = new Eq_SMG();
+
                 break;
-            case 4:
-                gunmenu = new Eq_Pistol();
-                break;
-            default:
-                gunmenu=null;
         }
 
-        if(gunmenu!=null){
+        if(assaultRifle_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(R.id.screen_area,gunmenu);
-            fragmentTransaction.addToBackStack("gun_fragment");
+            fragmentTransaction.replace(R.id.screen_area,assaultRifle_menu);
+            fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }
 
@@ -102,13 +96,13 @@ public class Eq extends ListFragment  {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-     super.onViewCreated(view, savedInstanceState);
+        super.onViewCreated(view, savedInstanceState);
 
 
 
 
     }
-    
+
 
 
 

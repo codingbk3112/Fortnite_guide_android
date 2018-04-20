@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.Equiptment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.mcolv.fortnite_guide_android.R;
+
 
 public class Eq_Adapter extends ArrayAdapter<String> {
 
@@ -20,7 +22,7 @@ public class Eq_Adapter extends ArrayAdapter<String> {
 
     //for layout element example see eq_lists_element.xmlq
      Eq_Adapter(Context context, String[]titles, Integer[]drawid){ //constructor which you will pass to
-        super(context,R.layout.eq_lists_element,titles);{
+        super(context, R.layout.eq_lists_element,titles);{
 
         this.mcontext=context;
         this.titles=titles;

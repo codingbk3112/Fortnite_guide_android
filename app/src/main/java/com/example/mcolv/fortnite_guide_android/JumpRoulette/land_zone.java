@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.JumpRoulette;
 
 public class land_zone {
     private int x;//rand x for map landing

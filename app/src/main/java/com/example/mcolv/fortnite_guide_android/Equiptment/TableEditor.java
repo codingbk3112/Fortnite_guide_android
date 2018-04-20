@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.Equiptment;
 
 import android.content.Context;
 import android.util.TypedValue;
@@ -8,6 +8,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.mcolv.fortnite_guide_android.R;
 
 
 public class TableEditor {

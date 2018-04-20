@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android;
+package com.example.mcolv.fortnite_guide_android.JumpRoulette;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -13,10 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.example.mcolv.fortnite_guide_android.R;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 

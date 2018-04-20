@@ -13,6 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.mcolv.fortnite_guide_android.Equiptment.Eq;
+import com.example.mcolv.fortnite_guide_android.JumpRoulette.RandomJump;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
+}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -80,7 +83,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
+        while(getSupportFragmentManager().getBackStackEntryCount()> 0){ //clears back stack so dont have to go through every fragment sublevel
+            getSupportFragmentManager().popBackStackImmediate();
+        }
         switch (item.getItemId()){
 
             case R.id.Equipment_menu :
@@ -105,7 +110,7 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
             fragmentTransaction.replace(R.id.screen_area,fragment);
-            fragmentTransaction.addToBackStack("equiptment_fragment");
+            fragmentTransaction.addToBackStack("fragment");
             fragmentTransaction.commit();
         }
 
