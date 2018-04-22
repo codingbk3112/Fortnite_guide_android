@@ -16,6 +16,10 @@
             android:id="@id/random_wheel"
             android:icon="@drawable/ic_menu_parachutist"
             android:title="@string/Jump_roulette_tab" />
+        <item
+            android:id="@+id/weapon_compare"
+            android:icon="@drawable/ar_scar"
+            android:title="Weapon Compare"/>
 
     </group>
 

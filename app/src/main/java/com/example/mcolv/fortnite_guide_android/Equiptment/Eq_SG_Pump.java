@@ -40,16 +40,26 @@ public class Eq_SG_Pump extends Fragment {
 
         String[] textInColumn = {
                 "UC",      // title for column
-                "111",      //Damage
-                "222",      //Headshot damage
-                "333",      //Fire Rate
-                "444",      //Reload Time
-                "555",      //DPS
-                "777",      //Mag Size
+                "90",      //Damage
+                "225",      //Headshot damage
+                "0.7",      //Fire Rate
+                "4.8",      //Reload Time
+                "63",      //DPS
+                "5",      //Mag Size
 
         };
+        editor.add_column(textInColumn,R.color.weapon_green);
 
+        textInColumn[0]="R";      // title for column
+        textInColumn[1]="95";     //Damage
+        textInColumn[2]="237.5";     //Headshot damage
+        textInColumn[3]="0.7";     //Fire Rate
+        textInColumn[4]="4.6";      //Reload Time
+        textInColumn[5]="66.5";     //DPS
+        textInColumn[6]="5";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
+
+
 
 
         super.onViewCreated(view, savedInstanceState);

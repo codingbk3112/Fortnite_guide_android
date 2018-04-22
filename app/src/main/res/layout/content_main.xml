@@ -22,16 +22,17 @@
             android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:layout_gravity="top"
             app:srcCompat="@drawable/fngicon" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:text="Possibly information about us and what we want to do with the app and contact information?"
+            android:layout_marginTop="50dp"
+            android:text="@string/welcome_and_contact_info"
             android:textColor="@color/colorText" />
 
 

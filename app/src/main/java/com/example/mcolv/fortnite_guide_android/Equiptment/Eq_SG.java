@@ -75,7 +75,7 @@ public class Eq_SG extends ListFragment  {
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(R.id.screen_area,shotgun_menu);
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),shotgun_menu);
             fragmentTransaction.addToBackStack("eq_sg");
             fragmentTransaction.commit();
         }

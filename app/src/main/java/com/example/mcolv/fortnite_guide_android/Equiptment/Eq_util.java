@@ -82,7 +82,7 @@ public class Eq_util extends ListFragment  {
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(R.id.screen_area,assaultRifle_menu);
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),assaultRifle_menu);
             fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }

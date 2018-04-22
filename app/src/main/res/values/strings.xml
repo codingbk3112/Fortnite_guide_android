@@ -14,7 +14,6 @@
     <string name="fortnite_map">fortnight map picture super high quality</string>
 
 
-
     <string name="Assault_Rifles_button_name">Assault Rifles</string>
     <string name="Shotgun_button_name">Shotguns</string>
     <string name="Pistol_button_name">Pistols</string>
@@ -25,7 +24,6 @@
     <string name="Smg_button_name">SMGs</string>
 
 
-
     <string name="table_header"><b><u> Stats </u></b></string>
     <string name="table_damage"> Damage </string>
     <string name="table_fire_rate"> Fire Rate </string>
@@ -33,7 +31,8 @@
     <string name="table_reload_time"> Reload Time </string>
     <string name="table_Dps"> DPS </string>
     <string name="table_Mag_size"> Mag Size </string>
+    <string name="title_activity_weapon_compare">weapon_compare</string>
 
-
-
+    <string name="guncompare_instructions"> This is the Gun Comparison Activity \n \n 1) Add gun via button above \n \n 2) Select gun \n \n 3) Repeat \n \n 4) swipe left and right to compare \n \n  press back to end comparison </string>
+    <string name="welcome_and_contact_info"> Just a simple app made to help \n people with Fortnite.  \n I want as much feedback as \n possible in the form of an email. \n \n My vision for this is to add features \n that people want in an app like this.\n \n \n  Contact: Matthew Colvin \n Email: mcolvin32.7@gmail.com</string>
 </resources>

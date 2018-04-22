@@ -39,36 +39,36 @@ public class Eq_Snipe_bolt extends Fragment {
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
         //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary
         String[] textInColumn = {
-                "needs loaded",      // title for column
-                "27",      //Damage
-                "67.5",      //Headshot damage
-                "4.06",      //Fire Rate
-                "2.9",      //Reload Time
-                "109.7",      //DPS
-                "30",      //Mag Size
+                "R",      // title for column
+                "105",      //Damage
+                "262.5",      //Headshot damage
+                "0.33",      //Fire Rate
+                "3",      //Reload Time
+                "34.7",      //DPS
+                "1",      //Mag Size
 
         };
-        editor.add_column(textInColumn,R.color.weapon_grey);
-
-        textInColumn[0]="same";      // title for column
-        textInColumn[1]="29";     //Damage
-        textInColumn[2]="72.5";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
-        textInColumn[4]="2.7";      //Reload Time
-        textInColumn[5]="117.9";     //DPS
-        textInColumn[6]="30";      //Mag Size
-        editor.add_column(textInColumn,R.color.weapon_green);
-
-
-
-        textInColumn[0]="same";      // title for column
-        textInColumn[1]="30";     //Damage
-        textInColumn[2]="75";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
-        textInColumn[4]="2.6";      //Reload Time
-        textInColumn[5]="121.9";     //DPS
-        textInColumn[6]="30";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
+
+        textInColumn[0]="E";      // title for column
+        textInColumn[1]="110";     //Damage
+        textInColumn[2]="275";     //Headshot damage
+        textInColumn[3]="0.33";     //Fire Rate
+        textInColumn[4]="2.8";      //Reload Time
+        textInColumn[5]="36.3";     //DPS
+        textInColumn[6]="1";      //Mag Size
+        editor.add_column(textInColumn,R.color.weapon_purple);
+
+
+
+        textInColumn[0]="L";      // title for column
+        textInColumn[1]="116";     //Damage
+        textInColumn[2]="290";     //Headshot damage
+        textInColumn[3]="0.33";     //Fire Rate
+        textInColumn[4]="2.7";      //Reload Time
+        textInColumn[5]="38.3";     //DPS
+        textInColumn[6]="1";      //Mag Size
+        editor.add_column(textInColumn,R.color.weapon_gold);
 
 
         super.onViewCreated(view, savedInstanceState);

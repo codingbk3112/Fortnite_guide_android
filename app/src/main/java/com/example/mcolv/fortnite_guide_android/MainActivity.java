@@ -1,5 +1,6 @@
 package com.example.mcolv.fortnite_guide_android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +16,8 @@ import android.view.MenuItem;
 
 import com.example.mcolv.fortnite_guide_android.Equiptment.Eq;
 import com.example.mcolv.fortnite_guide_android.JumpRoulette.RandomJump;
+import com.example.mcolv.fortnite_guide_android.weaponcompare.Eq_holder;
+import com.example.mcolv.fortnite_guide_android.weaponcompare.weapon_compare;
 
 
 public class MainActivity extends AppCompatActivity
@@ -94,13 +97,18 @@ public class MainActivity extends AppCompatActivity
             case R.id.random_wheel :
                 fragment = new RandomJump();
                 break;
+            case R.id.weapon_compare :
+                Intent intent=new Intent(this,weapon_compare.class);
+                startActivity(intent);
+                break;
             case R.id.guides :
-
+                fragment = null; // for now...
                 break;
             case R.id.share :
 
                 break;
-
+            default:
+                fragment=null;
 
         }
 
