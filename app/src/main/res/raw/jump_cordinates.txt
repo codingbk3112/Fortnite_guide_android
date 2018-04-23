@@ -1,6 +1,11 @@
-20 155 Snobby_Shores
+24 140 Snobby_Shores
 64 22 Junk_Junction
 52 56 Haunted_Hills
 97 92 Pleasant_Park
 180 62 Anarchy_Acres
 152 113 Loot_Lake
+130 155 Tilted_Towers
+125 205 Shifty_Shafts
+118 315 Flush_Factory
+77 198 Greasy_Grove
+200 202 Salty_Springs
