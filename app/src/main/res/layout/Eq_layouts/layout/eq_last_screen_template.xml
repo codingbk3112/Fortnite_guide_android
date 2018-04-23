@@ -8,17 +8,19 @@
     tools:context=".Equiptment.Eq_SG_Pump"
     >
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></View>
 
     <ImageView
         android:id="@+id/pic_above_table"
         android:layout_width="match_parent"
-        android:layout_height="357dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="400dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:adjustViewBounds="true"
         android:src="@drawable/sg_pump"
-        app:layout_constraintBottom_toTopOf="@+id/stat_table"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:stretchColumns="*"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/table_divider">
 
@@ -185,6 +188,33 @@
 
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/Gun_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/table_text_color"
+        android:textSize="@dimen/table_text_size"
+        android:text="Gun"
+        app:layout_constraintBottom_toTopOf="@+id/stat_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/plusbutton"
+        android:layout_width="66dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/plus_button"
+        app:layout_constraintBottom_toTopOf="@+id/Gun_name"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
 
 </android.support.constraint.ConstraintLayout>

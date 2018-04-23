@@ -27,6 +27,7 @@ public class TableEditor {
             if(row instanceof TableRow){
                 TableRow tableRow = (TableRow) row;
                 TextView add = new TextView(context);
+                add.setTextColor(context.getResources().getColor(R.color.table_text_color));
                 add.setTextSize(TypedValue.COMPLEX_UNIT_PX,context.getResources().getDimension(R.dimen.table_num_size));
                 if(j==0){ add.setTextSize(TypedValue.COMPLEX_UNIT_PX,context.getResources().getDimension(R.dimen.table_text_size));}
                 add.setText(text_to_add[j]); j++;

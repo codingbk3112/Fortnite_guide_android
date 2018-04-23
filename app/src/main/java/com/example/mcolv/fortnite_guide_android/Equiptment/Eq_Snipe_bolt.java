@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.example.mcolv.fortnite_guide_android.R;
 
@@ -35,6 +36,18 @@ public class Eq_Snipe_bolt extends Fragment {
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
 
+        TextView gunlabel = view.findViewById(R.id.Gun_name);
+        gunlabel.setText("Bolt-Action Sniper");
+
+
+        ImageView plusputton = view.findViewById(R.id.plusbutton);
+
+        if(     ((ViewGroup)getView().getParent()).getId() == R.id.Gun1_Frame  ||
+                ((ViewGroup)getView().getParent()).getId() == R.id.Gun2_Frame){
+            plusputton.setVisibility(View.VISIBLE);
+        }else{
+            plusputton.setVisibility(View.INVISIBLE);
+        }
 
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
         //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary

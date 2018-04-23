@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.example.mcolv.fortnite_guide_android.R;
 
@@ -36,6 +37,18 @@ public class Eq_Snipe_semiauto extends Fragment {
         TableLayout statTable = view.findViewById(R.id.stat_table);
 
 
+        ImageView plusputton = view.findViewById(R.id.plusbutton);
+
+        if(     ((ViewGroup)getView().getParent()).getId() == R.id.Gun1_Frame  ||
+                ((ViewGroup)getView().getParent()).getId() == R.id.Gun2_Frame){
+            plusputton.setVisibility(View.VISIBLE);
+        }else{
+            plusputton.setVisibility(View.INVISIBLE);
+        }
+
+        TextView gunlabel = view.findViewById(R.id.Gun_name);
+        gunlabel.setText("Semi-Auto Sniper");
+
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
         //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary
         String[] textInColumn = {
@@ -48,7 +61,7 @@ public class Eq_Snipe_semiauto extends Fragment {
                 "10",      //Mag Size
 
         };
-        editor.add_column(textInColumn,R.color.weapon_grey);
+        editor.add_column(textInColumn,R.color.weapon_purple);
 
         textInColumn[0]="L";      // title for column
         textInColumn[1]="66";     //Damage
@@ -57,7 +70,7 @@ public class Eq_Snipe_semiauto extends Fragment {
         textInColumn[4]="2.3";      //Reload Time
         textInColumn[5]="79.2";     //DPS
         textInColumn[6]="10";      //Mag Size
-        editor.add_column(textInColumn,R.color.weapon_green);
+        editor.add_column(textInColumn,R.color.weapon_gold);
 
 
         super.onViewCreated(view, savedInstanceState);

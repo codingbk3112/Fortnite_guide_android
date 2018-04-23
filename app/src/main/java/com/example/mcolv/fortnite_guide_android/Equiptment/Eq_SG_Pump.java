@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.example.mcolv.fortnite_guide_android.R;
 
@@ -34,6 +35,19 @@ public class Eq_SG_Pump extends Fragment {
 
         ImageView gunpic = view.findViewById(R.id.pic_above_table);
         gunpic.setImageResource(R.drawable.sg_pump);                //sets the sg_pump as the picture
+
+        TextView gunlabel = view.findViewById(R.id.Gun_name);
+        gunlabel.setText("Pump Shotgun");
+
+
+        ImageView plusputton = view.findViewById(R.id.plusbutton);
+
+        if(     ((ViewGroup)getView().getParent()).getId() == R.id.Gun1_Frame  ||
+                ((ViewGroup)getView().getParent()).getId() == R.id.Gun2_Frame){
+            plusputton.setVisibility(View.VISIBLE);
+        }else{
+            plusputton.setVisibility(View.INVISIBLE);
+        }
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
         TableEditor editor = new TableEditor(statTable,getContext());

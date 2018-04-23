@@ -48,7 +48,6 @@ public class Eq_holder extends Fragment {
         FrameLayout container = view.findViewById(R.id.child_holder);
         container.setId(container_id);
 
-
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(container_id,addition);
