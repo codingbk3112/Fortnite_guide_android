@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq extends ListFragment  {
+public class Eq_Machienegun extends ListFragment  {
 
 
 
@@ -28,30 +28,17 @@ public class Eq extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Assault Rifle",   //your menu titles
-                "Sniper",
-                "Shotgun",
-                "SMG",
-                "Machine Gun",
-                "Pistol",
-                "Explosives",
-                "Healing",
-                "Utilities"
+                "Light Machine Gun",   //your menu titles
+                "Mini Gun",
         };
         Integer[] imagesids = {
-                R.drawable.ar_scar, // your links to drawables jish is working on
-                R.drawable.snipe_bolt,
-                R.drawable.sg_pump,
-                R.drawable.smg_tatical,
                 R.drawable.machienegun_light,
-                R.drawable.pistol_basic,
-                R.drawable.explode_rpg,
-                R.drawable.heal_bandage,
-                R.drawable.util_launchpad
+                R.drawable.machienegun_minigun// your links to drawables jish is working on
+
+
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -66,46 +53,26 @@ public class Eq extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
+        Fragment machienegun_menu = null;
 
         switch (position){
 
             case 0:
-                gunmenu = new Eq_AR();
+                //assault rifle launch
                 break;
+
             case 1:
-                gunmenu = new Eq_Snipe();
+                //burst rifle launch
                 break;
-            case 2:
-                gunmenu= new Eq_SG();
-                break;
-            case 3:
-                gunmenu = new Eq_SMG();
-                break;
-            case 4 :
-                gunmenu = new Eq_Machienegun();
-                break;
-            case 5:
-                gunmenu = new Eq_Pistol();
-                break;
-            case 6:
-                gunmenu = new Eq_Explosives();
-                break;
-            case 7:
-                gunmenu = new Eq_Heal();
-                break;
-            case 8:
-                gunmenu= new Eq_util();
-                break;
-            default:
-                gunmenu=null;
+
         }
 
-        if(gunmenu!=null){
-            FragmentManager fragmentManager = getFragmentManager();
+        if(machienegun_menu!=null){
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),gunmenu);
-            fragmentTransaction.addToBackStack("gun_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),machienegun_menu);
+            fragmentTransaction.addToBackStack("machienegun_fragment");
             fragmentTransaction.commit();
         }
 
@@ -118,13 +85,13 @@ public class Eq extends ListFragment  {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-     super.onViewCreated(view, savedInstanceState);
+        super.onViewCreated(view, savedInstanceState);
 
 
 
 
     }
-    
+
 
 
 

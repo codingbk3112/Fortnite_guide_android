@@ -31,16 +31,17 @@ public class Eq_Heal extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Healing stuff",   //your menu titles
-                "   ",
-                "   ",
-                "   "
+                "Bandages",   //your menu titles
+                "Med Kit",
+                "Small Potion",
+                "Chug Jug"
         };
         Integer[] imagesids = {
                 R.drawable.heal_bandage, // your links to drawables jish is working on
-                R.drawable.heal_bandage,
-                R.drawable.heal_bandage,
-                R.drawable.heal_bandage,
+                R.drawable.heal_medkit,
+                R.drawable.heal_small_potion,
+                R.drawable.heal_chugjug
+
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -55,34 +56,32 @@ public class Eq_Heal extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment assaultRifle_menu = null;
+        Fragment healing_menu = null;
 
         switch (position){
 
             case 0:
-                //assault rifle launch
-                assaultRifle_menu = new Eq_AR_M16();
+                //bandage launch
                 break;
 
             case 1:
-                //burst rifle launch
-                assaultRifle_menu = new Eq_AR_Burst();
+                //medkit launch
                 break;
 
             case 2:
-
+                //small potion launch
                 break;
 
             case 3:
-
+                //chug jug launch
                 break;
         }
 
-        if(assaultRifle_menu!=null){
+        if(healing_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),assaultRifle_menu);
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),healing_menu);
             fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }

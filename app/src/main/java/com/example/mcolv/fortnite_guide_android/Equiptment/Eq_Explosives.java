@@ -31,16 +31,14 @@ public class Eq_Explosives extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "boom boom",   //your menu titles
-                "   ",
-                "   ",
-                "   "
+                "RPG",   //your menu titles
+                "Grenade",
+                "Remote Explosives"
         };
         Integer[] imagesids = {
                 R.drawable.explode_rpg, // your links to drawables jish is working on
-                R.drawable.heal_bandage,
-                R.drawable.heal_bandage,
-                R.drawable.heal_bandage,
+                R.drawable.exp_grenade,
+                R.drawable.exp_remoteexplosive
         };
 
         ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
@@ -48,29 +46,26 @@ public class Eq_Explosives extends ListFragment  {
 
         return rootview;
     }
-    Fragment gunmenu= null;
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment assaultRifle_menu = null;
+        Fragment explosives_menu = null;
 
         switch (position){
 
             case 0:
-                //assault rifle launch
-                assaultRifle_menu = new Eq_AR_M16();
+                // rpg menu
                 break;
 
             case 1:
-                //burst rifle launch
-                assaultRifle_menu = new Eq_AR_Burst();
+                //launch grenade
                 break;
 
             case 2:
-
+                //launch remote explosives
                 break;
 
             case 3:
@@ -78,11 +73,11 @@ public class Eq_Explosives extends ListFragment  {
                 break;
         }
 
-        if(assaultRifle_menu!=null){
+        if(explosives_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),assaultRifle_menu);
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),explosives_menu);
             fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }
