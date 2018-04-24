@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/fortnite_map_4_3_2018" />
+            android:src="@drawable/fortnite_map_4_24_2018" />
 
     </RelativeLayout>
 

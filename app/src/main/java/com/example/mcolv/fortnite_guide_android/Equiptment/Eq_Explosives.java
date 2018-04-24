@@ -36,7 +36,7 @@ public class Eq_Explosives extends ListFragment  {
                 "Remote Explosives"
         };
         Integer[] imagesids = {
-                R.drawable.explode_rpg, // your links to drawables jish is working on
+                R.drawable.exp_rpg, // your links to drawables jish is working on
                 R.drawable.exp_grenade,
                 R.drawable.exp_remoteexplosive
         };

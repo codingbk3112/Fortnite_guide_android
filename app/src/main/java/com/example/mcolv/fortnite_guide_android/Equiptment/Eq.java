@@ -49,7 +49,7 @@ public class Eq extends ListFragment  {
                 R.drawable.smg_tatical,
                 R.drawable.machienegun_light,
                 R.drawable.pistol_basic,
-                R.drawable.explode_rpg,
+                R.drawable.exp_rpg,
                 R.drawable.heal_bandage,
                 R.drawable.util_launchpad
         };
