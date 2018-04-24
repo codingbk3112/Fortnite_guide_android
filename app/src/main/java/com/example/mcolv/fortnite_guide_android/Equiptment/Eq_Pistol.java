@@ -63,13 +63,16 @@ public class Eq_Pistol extends ListFragment  {
         switch (position){
 
             case 0:
-                pistol_menu = new Eq_SG_Pump();
+                pistol_menu = new Eq_Pistol_basic();
                 break;
             case 1:
-
-
+                pistol_menu = new Eq_Pistol_handcannon();
                 break;
             case 2:
+                pistol_menu = new Eq_Pistol_revolver();
+                break;
+            case 3 :
+                pistol_menu = new Eq_Pistol_scilenced();
 
 
         }
