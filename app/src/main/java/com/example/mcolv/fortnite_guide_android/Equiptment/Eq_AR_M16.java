@@ -55,7 +55,7 @@ public class Eq_AR_M16 extends Fragment {
                 "30",      //Damage
                 "60",      //Headshot damage
                 "5.5",      //Fire Rate
-                "2.9",      //Reload Time
+                "2.3",      //Reload Time
                 "165",      //DPS
                 "30",      //Mag Size
 
@@ -65,8 +65,8 @@ public class Eq_AR_M16 extends Fragment {
         textInColumn[0]="UC";      // title for column
         textInColumn[1]="31";     //Damage
         textInColumn[2]="62";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
-        textInColumn[4]="5.5";      //Reload Time
+        textInColumn[3]="5.5";     //Fire Rate
+        textInColumn[4]="2.2";      //Reload Time
         textInColumn[5]="170.5";     //DPS
         textInColumn[6]="30";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_green);
@@ -76,8 +76,8 @@ public class Eq_AR_M16 extends Fragment {
         textInColumn[0]="R";      // title for column
         textInColumn[1]="33";     //Damage
         textInColumn[2]="66";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
-        textInColumn[4]="5.5";      //Reload Time
+        textInColumn[3]="5.5";     //Fire Rate
+        textInColumn[4]="2.2";      //Reload Time
         textInColumn[5]="181.5";     //DPS
         textInColumn[6]="30";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);

@@ -82,7 +82,7 @@ public class Eq_Pistol_basic extends Fragment {
         textInColumn[2]="62.5";     //Headshot damage
         textInColumn[3]="6.75";     //Fire Rate
         textInColumn[4]="1.4";      //Reload Time
-        textInColumn[5]="168.7";     //DPS
+        textInColumn[5]="168.8";     //DPS
         textInColumn[6]="16";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
 

@@ -54,10 +54,10 @@ public class Eq_AR_Burst extends Fragment {
         String[] textInColumn = {
                 "C",      // title for column
                 "27",      //Damage
-                "67.5",      //Headshot damage
-                "4.06",      //Fire Rate
+                "54",      //Headshot damage
+                "1.75",      //Fire Rate
                 "2.9",      //Reload Time
-                "109.7",      //DPS
+                "47.2",      //DPS
                 "30",      //Mag Size
 
         };
@@ -65,10 +65,10 @@ public class Eq_AR_Burst extends Fragment {
 
         textInColumn[0]="UC";      // title for column
         textInColumn[1]="29";     //Damage
-        textInColumn[2]="72.5";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
+        textInColumn[2]="58";     //Headshot damage
+        textInColumn[3]="1.75";     //Fire Rate
         textInColumn[4]="2.7";      //Reload Time
-        textInColumn[5]="117.9";     //DPS
+        textInColumn[5]="50.8";     //DPS
         textInColumn[6]="30";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_green);
 
@@ -76,10 +76,10 @@ public class Eq_AR_Burst extends Fragment {
 
         textInColumn[0]="R";      // title for column
         textInColumn[1]="30";     //Damage
-        textInColumn[2]="75";     //Headshot damage
-        textInColumn[3]="4.06";     //Fire Rate
+        textInColumn[2]="60";     //Headshot damage
+        textInColumn[3]="1.75";     //Fire Rate
         textInColumn[4]="2.6";      //Reload Time
-        textInColumn[5]="121.9";     //DPS
+        textInColumn[5]="52.5";     //DPS
         textInColumn[6]="30";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
 

@@ -58,7 +58,7 @@ public class Eq_SMG_tatical extends Fragment {
                 "40",      //Headshot damage
                 "13",      //Fire Rate
                 "2.4",      //Reload Time
-                "160",      //DPS
+                "208",      //DPS
                 "35",      //Mag Size
 
         };
@@ -69,7 +69,7 @@ public class Eq_SMG_tatical extends Fragment {
         textInColumn[2]="42.5";     //Headshot damage
         textInColumn[3]="13";     //Fire Rate
         textInColumn[4]="2.3";      //Reload Time
-        textInColumn[5]="170";     //DPS
+        textInColumn[5]="221";     //DPS
         textInColumn[6]="35";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
 
@@ -80,7 +80,7 @@ public class Eq_SMG_tatical extends Fragment {
         textInColumn[2]="45";     //Headshot damage
         textInColumn[3]="13";     //Fire Rate
         textInColumn[4]="2.2";      //Reload Time
-        textInColumn[5]="180";     //DPS
+        textInColumn[5]="234";     //DPS
         textInColumn[6]="35";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_purple);
 
