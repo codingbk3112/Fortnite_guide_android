@@ -31,7 +31,7 @@ public class Eq_Heal extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Healing stuff",   //your menu titles
+                "Bandages",   //your menu titles
                 "   ",
                 "   ",
                 "   "
@@ -55,18 +55,18 @@ public class Eq_Heal extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment assaultRifle_menu = null;
+        Fragment Healing_menu = null;
 
         switch (position){
 
             case 0:
                 //assault rifle launch
-                assaultRifle_menu = new Eq_AR_M16();
+                //Healing_menu = new Eq_Bandage();
                 break;
 
             case 1:
                 //burst rifle launch
-                assaultRifle_menu = new Eq_AR_Burst();
+                //Healing_menu = new Eq_AR_Burst();
                 break;
 
             case 2:
@@ -78,12 +78,12 @@ public class Eq_Heal extends ListFragment  {
                 break;
         }
 
-        if(assaultRifle_menu!=null){
+        if(Healing_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),assaultRifle_menu);
-            fragmentTransaction.addToBackStack("assaultRifle_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),Healing_menu);
+            fragmentTransaction.addToBackStack("Healing_fragment");
             fragmentTransaction.commit();
         }
 

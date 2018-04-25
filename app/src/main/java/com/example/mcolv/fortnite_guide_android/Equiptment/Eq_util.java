@@ -31,7 +31,7 @@ public class Eq_util extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Healing stuff",   //your menu titles
+                "Launchpad",   //your menu titles
                 "   ",
                 "   ",
                 "   "
