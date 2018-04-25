@@ -14,3 +14,6 @@
 232 92 Tomato_Town
 315 125 Lonely_Lodge
 262 172 Retail_Row
+211 252 Fatal_Fields
+295 250 Moisty_Mire
+198 307 Lucky_Landing
