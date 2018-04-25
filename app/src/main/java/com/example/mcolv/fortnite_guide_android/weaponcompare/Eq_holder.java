@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.example.mcolv.fortnite_guide_android.Equiptment.Eq;
+import com.example.mcolv.fortnite_guide_android.Equipment.Eq;
 import com.example.mcolv.fortnite_guide_android.R;
 
 import java.util.Random;

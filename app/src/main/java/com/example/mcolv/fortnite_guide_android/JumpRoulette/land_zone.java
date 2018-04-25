@@ -5,8 +5,8 @@ public class land_zone {
     private int y;//rand y for map landing
     private String title;
 
-    land_zone(int xx, int yy, String titlee) { //constructor
-        title = titlee;
+    land_zone(int xx, int yy, String title) { //constructor
+        title = title;
         x = xx;
         y = yy;
     }

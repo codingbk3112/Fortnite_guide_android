@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mcolv.fortnite_guide_android.Equiptment.Eq;
+import com.example.mcolv.fortnite_guide_android.Equipment.Eq;
 import com.example.mcolv.fortnite_guide_android.R;
 
 public class weapon_compare extends AppCompatActivity {
@@ -42,8 +42,8 @@ public class weapon_compare extends AppCompatActivity {
         final ConstraintLayout.LayoutParams match_screen = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT,ConstraintLayout.LayoutParams.MATCH_PARENT);
 
 
-        final ViewGroup.LayoutParams Gun1OrigionalParams = gun1container.getLayoutParams();
-        final ViewGroup.LayoutParams Gun2OrigionalParams = gun2container.getLayoutParams();
+        final ViewGroup.LayoutParams Gun1OriginalParams = gun1container.getLayoutParams();
+        final ViewGroup.LayoutParams Gun2OriginalParams = gun2container.getLayoutParams();
 
         gun1container.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class weapon_compare extends AppCompatActivity {
                     title.setVisibility(View.INVISIBLE);
                 }
                 if (gun1ContainerClicked==1){
-                    gun1container.setLayoutParams(Gun1OrigionalParams);
+                    gun1container.setLayoutParams(Gun1OriginalParams);
                     gun2container.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(),"tap again to add different gun",Toast.LENGTH_SHORT).show();
                     gun1ContainerClicked=-1;
@@ -85,7 +85,7 @@ public class weapon_compare extends AppCompatActivity {
                     title.setVisibility(View.INVISIBLE);
                 }
                 if (gun2ContainerClicked==1){
-                    gun2container.setLayoutParams(Gun2OrigionalParams);
+                    gun2container.setLayoutParams(Gun2OriginalParams);
                     gun1container.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(),"tap again to add different gun",Toast.LENGTH_SHORT).show();
                     gun2ContainerClicked=-1;
