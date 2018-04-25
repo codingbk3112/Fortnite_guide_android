@@ -12,10 +12,10 @@
         android:layout_gravity="center"
         />
     <TextView
-        android:id="@+id/equiptment_element_txt"
+        android:id="@+id/equipment_element_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/quiptment_screen_txt_size"
+        android:textSize="@dimen/equipment_screen_txt_size"
         android:text="@string/Assault_Rifles_button_name"
         android:layout_gravity="center"
         />
