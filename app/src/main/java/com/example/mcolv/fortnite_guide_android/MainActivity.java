@@ -14,9 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.mcolv.fortnite_guide_android.Equiptment.Eq;
+import com.example.mcolv.fortnite_guide_android.Equipment.Eq;
 import com.example.mcolv.fortnite_guide_android.JumpRoulette.RandomJump;
-import com.example.mcolv.fortnite_guide_android.weaponcompare.Eq_holder;
 import com.example.mcolv.fortnite_guide_android.weaponcompare.weapon_compare;
 
 

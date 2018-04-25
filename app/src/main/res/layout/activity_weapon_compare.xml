@@ -22,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:contentDescription="Plus Button"
             android:layout_width="61dp"
             android:layout_height="63dp"
             android:layout_gravity="center"
@@ -45,6 +46,7 @@
         app:layout_constraintVertical_bias="1">
 
         <ImageView
+            android:contentDescription="Plus Button"
             android:layout_width="61dp"
             android:layout_height="63dp"
             android:layout_gravity="center"
