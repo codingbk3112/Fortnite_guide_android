@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <ImageView
-        android:contentDescription="Gun Picture"
         android:id="@+id/equipment_element_img"
+        android:contentDescription="Gun Picture"
         android:layout_width="@dimen/equipment_screen_images_width_and_height"
         android:layout_height="@dimen/equipment_screen_images_width_and_height"
         android:src="@drawable/ar_scar"

@@ -5,15 +5,15 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@id/Equipment_menu"
+            android:id="@+id/Equipment_menu"
             android:icon="@drawable/ic_menu_backpack"
             android:title="@string/equipment_tab" />
         <item
-            android:id="@id/guides"
+            android:id="@+id/guides"
             android:icon="@drawable/ic_library_books_black_24dp"
             android:title="@string/Guide_tab" />
         <item
-            android:id="@id/random_wheel"
+            android:id="@+id/random_wheel"
             android:icon="@drawable/ic_menu_parachutist"
             android:title="@string/Jump_roulette_tab" />
         <item
@@ -27,7 +27,7 @@
     <item android:title="Spread the word!!">
         <menu>
             <item
-                android:id="@id/share"
+                android:id="@+id/share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
         </menu>
