@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Eq_Pistol_revolver extends Fragment {
+public class Eq_AR_Scoped extends Fragment {
 
 
     @Override
@@ -32,9 +32,10 @@ public class Eq_Pistol_revolver extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         ImageView gunpic = view.findViewById(R.id.pic_above_table);
-        gunpic.setImageResource(R.drawable.pistol_revolver);                //sets the sg_pump as the picture
+        gunpic.setImageResource(R.drawable.ar_scoped);                //sets the sg_pump as the picture
 
-        TableLayout statTable = view.findViewById(R.id.stat_table);
+        TextView gunlabel = view.findViewById(R.id.Gun_name);
+        gunlabel.setText("Scoped Assault Rifle");
 
 
         ImageView plusputton = view.findViewById(R.id.plusbutton);
@@ -46,43 +47,31 @@ public class Eq_Pistol_revolver extends Fragment {
             plusputton.setVisibility(View.INVISIBLE);
         }
 
-
-        TextView gunlabel = view.findViewById(R.id.Gun_name);
-        gunlabel.setText("Revolver");
-
+        TableLayout statTable = view.findViewById(R.id.stat_table);
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
         //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary
         String[] textInColumn = {
-                "C",      // title for column
-                "54",      //Damage
-                "135",      //Headshot damage
-                "0.9",      //Fire Rate
-                "2.4",      //Reload Time
-                "48.6",      //DPS
-                "6",      //Mag Size
+                "R",      // title for column
+                "23",      //Damage
+                "46",      //Headshot damage
+                "3.5",      //Fire Rate
+                "2.3",      //Reload Time
+                "80.5",      //DPS
+                "20",      //Mag Size
 
         };
-        editor.add_column(textInColumn,R.color.weapon_grey);
-
-        textInColumn[0]="UC";      // title for column
-        textInColumn[1]="57";     //Damage
-        textInColumn[2]="142.7";     //Headshot damage
-        textInColumn[3]="0.9";     //Fire Rate
-        textInColumn[4]="2.3";      //Reload Time
-        textInColumn[5]="51.3";     //DPS
-        textInColumn[6]="6";      //Mag Size
-        editor.add_column(textInColumn,R.color.weapon_green);
-
-
-
-        textInColumn[0]="R";      // title for column
-        textInColumn[1]="60";     //Damage
-        textInColumn[2]="150";     //Headshot damage
-        textInColumn[3]="0.9";     //Fire Rate
-        textInColumn[4]="2.2";      //Reload Time
-        textInColumn[5]="54";     //DPS
-        textInColumn[6]="6";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_blue);
+
+        textInColumn[0]="E";      // title for column
+        textInColumn[1]="24";     //Damage
+        textInColumn[2]="48";     //Headshot damage
+        textInColumn[3]="3.5";     //Fire Rate
+        textInColumn[4]="2.2";      //Reload Time
+        textInColumn[5]="84";     //DPS
+        textInColumn[6]="20";      //Mag Size
+        editor.add_column(textInColumn,R.color.weapon_purple);
+
+
 
 
         super.onViewCreated(view, savedInstanceState);

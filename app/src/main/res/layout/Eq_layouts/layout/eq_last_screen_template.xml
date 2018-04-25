@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/equiptment_menus_color"
-    tools:context=".Equiptment.Eq_SG_Pump"
+    android:background="@color/equipment_menus_color"
+    tools:context=".Equipment.Eq_SG_Pump"
     >
 
     <View

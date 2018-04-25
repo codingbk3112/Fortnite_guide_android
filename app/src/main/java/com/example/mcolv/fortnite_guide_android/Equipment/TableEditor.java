@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 import android.content.Context;
 import android.util.TypedValue;

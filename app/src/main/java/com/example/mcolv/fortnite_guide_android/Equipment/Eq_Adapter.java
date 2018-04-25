@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -42,8 +42,8 @@ public class Eq_Adapter extends ArrayAdapter<String> {
             LayoutInflater inflater= ((Activity)mcontext).getLayoutInflater();
             convertView=inflater.inflate(R.layout.eq_lists_element,parent,false);
             holder = new ViewHolder();
-            holder.txt = convertView.findViewById(R.id.equiptment_element_txt);
-            holder.img = convertView.findViewById(R.id.equiptment_element_img);
+            holder.txt = convertView.findViewById(R.id.equipment_element_txt);
+            holder.img = convertView.findViewById(R.id.equipment_element_img);
             convertView.setTag(holder);
         }else{
             holder = (ViewHolder) convertView.getTag();

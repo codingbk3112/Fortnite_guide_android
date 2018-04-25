@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -29,7 +29,7 @@ public class Eq extends ListFragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        //look at equipment_fragment.xml yours will be a copy
 
         String[] titles = {
                 "Assault Rifle",   //your menu titles
@@ -42,8 +42,8 @@ public class Eq extends ListFragment  {
                 "Healing",
                 "Utilities"
         };
-        Integer[] imagesids = {
-                R.drawable.ar_scar, // your links to drawables jish is working on
+        Integer[] image_ids = {
+                R.drawable.ar_scar, // your links to drawables josh is working on
                 R.drawable.snipe_bolt,
                 R.drawable.sg_pump,
                 R.drawable.smg_tatical,
@@ -54,7 +54,7 @@ public class Eq extends ListFragment  {
                 R.drawable.util_launchpad
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
@@ -82,7 +82,7 @@ public class Eq extends ListFragment  {
                 gunmenu = new Eq_SMG();
                 break;
             case 4 :
-                gunmenu = new Eq_Machienegun();
+                gunmenu = new Eq_Machinegun();
                 break;
             case 5:
                 gunmenu = new Eq_Pistol();

@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_Explosives extends ListFragment  {
+public class Eq_util extends ListFragment  {
 
 
 
@@ -31,41 +31,40 @@ public class Eq_Explosives extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "RPG",   //your menu titles
-                "Grenade",
-                "Remote Explosives"
+                "Jump Pad",   //your menu titles
+                "Impulse Grenade"
         };
-        Integer[] imagesids = {
-                R.drawable.exp_rpg, // your links to drawables jish is working on
-                R.drawable.exp_grenade,
-                R.drawable.exp_remoteexplosive
+        Integer[] image_ids = {
+                R.drawable.util_launchpad, // your links to drawables josh is working on
+                R.drawable.util_impulse
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
     }
+    Fragment gunmenu= null;
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment explosives_menu = null;
+        Fragment utility_menu = null;
 
         switch (position){
 
             case 0:
-                // rpg menu
+                // launchpad launch
                 break;
 
             case 1:
-                //launch grenade
+                //impulse grenade
                 break;
 
             case 2:
-                //launch remote explosives
+
                 break;
 
             case 3:
@@ -73,12 +72,12 @@ public class Eq_Explosives extends ListFragment  {
                 break;
         }
 
-        if(explosives_menu!=null){
+        if(utility_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),explosives_menu);
-            fragmentTransaction.addToBackStack("assaultRifle_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),utility_menu);
+            fragmentTransaction.addToBackStack("utilities_fragment");
             fragmentTransaction.commit();
         }
 

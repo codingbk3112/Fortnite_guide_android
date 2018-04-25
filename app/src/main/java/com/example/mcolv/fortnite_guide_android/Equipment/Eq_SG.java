@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_Snipe extends ListFragment  {
+public class Eq_SG extends ListFragment  {
 
 
 
@@ -29,24 +29,22 @@ public class Eq_Snipe extends ListFragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        //look at equipment_fragment.xml yours will be a copy
 
         String[] titles = {
-                //your menu titles
-                "Bolt Action Sniper",
-                "Semi-auto Sniper",
-                "Hunting Rifle",
-                "Crossbow"
+                  //your menu titles
+                "Pump Shotgun",
+                "Heavy Shotgun",
+                "Tactical Shotgun"
 
         };
-        Integer[] imagesids = {
-                R.drawable.snipe_bolt, // your links to drawables jish is working on
-                R.drawable.snipe_semiauto,
-                R.drawable.snipe_hunting,
-                R.drawable.snipe_cross
+        Integer[] image_ids = {
+                R.drawable.sg_pump, // your links to drawables josh is working on
+                R.drawable.sg_heavy,
+                R.drawable.sg_tatical
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
@@ -58,30 +56,26 @@ public class Eq_Snipe extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment snipe_menu=null;
+        Fragment shotgun_menu=null;
 
         switch (position){
 
             case 0:
-                snipe_menu = new Eq_Snipe_bolt();
+                shotgun_menu = new Eq_SG_Pump();
                 break;
             case 1:
-                snipe_menu = new Eq_Snipe_semiauto();
+                shotgun_menu = new Eq_SG_heavy();
                 break;
             case 2:
-                snipe_menu = new Eq_Snipe_hunting();
-                break;
-            case 3:
-                snipe_menu = new Eq_Snipe_crossbow();
-
+                shotgun_menu = new Eq_SG_tac();
 
 
         }
-        if(snipe_menu!=null){
+        if(shotgun_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),snipe_menu);
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),shotgun_menu);
             fragmentTransaction.addToBackStack("eq_sg");
             fragmentTransaction.commit();
         }

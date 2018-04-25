@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_SG extends ListFragment  {
+public class Eq_Heal extends ListFragment  {
 
 
 
@@ -28,65 +28,70 @@ public class Eq_SG extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                  //your menu titles
-                "Pump Shotgun",
-                "Heavy Shotgun",
-                "Tactical Shotgun"
+                "Bandages",   //your menu titles
+                "Med Kit",
+                "Small Potion",
+                "Chug Jug"
+        };
+        Integer[] image_ids = {
+                R.drawable.heal_bandage, // your links to drawables josh is working on
+                R.drawable.heal_medkit,
+                R.drawable.heal_small_potion,
+                R.drawable.heal_chugjug
 
         };
-        Integer[] imagesids = {
-                R.drawable.sg_pump, // your links to drawables jish is working on
-                R.drawable.sg_heavy,
-                R.drawable.sg_tatical
-        };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
     }
-
+    Fragment gunmenu= null;
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment shotgun_menu=null;
+        Fragment Healing_menu = null;
 
         switch (position){
 
             case 0:
-                shotgun_menu = new Eq_SG_Pump();
+                //bandage launch
                 break;
+
             case 1:
-                shotgun_menu = new Eq_SG_heavy();
+
+                //medkit launch
                 break;
+
             case 2:
-                shotgun_menu = new Eq_SG_tac();
+                //small potion launch
+                break;
 
-
+            case 3:
+                //chug jug launch
+                break;
         }
-        if(shotgun_menu!=null){
+
+        if(Healing_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),shotgun_menu);
-            fragmentTransaction.addToBackStack("eq_sg");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),Healing_menu);
+            fragmentTransaction.addToBackStack("Healing_fragment");
             fragmentTransaction.commit();
         }
 
 
 
 
-
         super.onListItemClick(l, v, position, id);
     }
-
 
 
     @Override
@@ -97,6 +102,7 @@ public class Eq_SG extends ListFragment  {
 
 
     }
+
 
 
 

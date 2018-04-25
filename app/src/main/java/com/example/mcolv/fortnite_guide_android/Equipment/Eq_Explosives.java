@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_Heal extends ListFragment  {
+public class Eq_Explosives extends ListFragment  {
 
 
 
@@ -31,59 +31,54 @@ public class Eq_Heal extends ListFragment  {
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
 
         String[] titles = {
-                "Bandages",   //your menu titles
-                "Med Kit",
-                "Small Potion",
-                "Chug Jug"
+                "RPG",   //your menu titles
+                "Grenade",
+                "Remote Explosives"
         };
-        Integer[] imagesids = {
-                R.drawable.heal_bandage, // your links to drawables jish is working on
-                R.drawable.heal_medkit,
-                R.drawable.heal_small_potion,
-                R.drawable.heal_chugjug
-
+        Integer[] image_ids = {
+                R.drawable.exp_rpg, // your links to drawables josh is working on
+                R.drawable.exp_grenade,
+                R.drawable.exp_remoteexplosive
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
     }
-    Fragment gunmenu= null;
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment Healing_menu = null;
+        Fragment explosives_menu = null;
 
         switch (position){
 
             case 0:
-                //bandage launch
+                // rpg menu
                 break;
 
             case 1:
-
-                //medkit launch
+                //launch grenade
                 break;
 
             case 2:
-                //small potion launch
+                //launch remote explosives
                 break;
 
             case 3:
-                //chug jug launch
+
                 break;
         }
 
-        if(Healing_menu!=null){
+        if(explosives_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),Healing_menu);
-            fragmentTransaction.addToBackStack("Healing_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),explosives_menu);
+            fragmentTransaction.addToBackStack("assaultRifle_fragment");
             fragmentTransaction.commit();
         }
 

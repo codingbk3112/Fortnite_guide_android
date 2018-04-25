@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 import static android.content.Context.VIBRATOR_SERVICE;
 
 
-public class Eq_Machienegun extends ListFragment  {
+public class Eq_Snipe extends ListFragment  {
 
 
 
@@ -28,59 +28,71 @@ public class Eq_Machienegun extends ListFragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);
+        View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
+        //look at equipment_fragment.xml yours will be a copy
 
         String[] titles = {
-                "Light Machine Gun",   //your menu titles
-                "Mini Gun",
-        };
-        Integer[] imagesids = {
-                R.drawable.machienegun_light,
-                R.drawable.machienegun_minigun// your links to drawables jish is working on
-
+                //your menu titles
+                "Bolt Action Sniper",
+                "Semi-auto Sniper",
+                "Hunting Rifle",
+                "Crossbow"
 
         };
+        Integer[] image_ids = {
+                R.drawable.snipe_bolt, // your links to drawables josh is working on
+                R.drawable.snipe_semiauto,
+                R.drawable.snipe_hunting,
+                R.drawable.snipe_cross
+        };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
     }
-    Fragment gunmenu= null;
+
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) { // this is what happens on clock of each item
         super.onListItemClick(l,v,position,id);
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment machienegun_menu = null;
+        Fragment snipe_menu=null;
 
         switch (position){
 
             case 0:
-                //assault rifle launch
+                snipe_menu = new Eq_Snipe_bolt();
                 break;
-
             case 1:
-                //burst rifle launch
+                snipe_menu = new Eq_Snipe_semiauto();
                 break;
+            case 2:
+                snipe_menu = new Eq_Snipe_hunting();
+                break;
+            case 3:
+                snipe_menu = new Eq_Snipe_crossbow();
+
+
 
         }
-
-        if(machienegun_menu!=null){
+        if(snipe_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),machienegun_menu);
-            fragmentTransaction.addToBackStack("machienegun_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),snipe_menu);
+            fragmentTransaction.addToBackStack("eq_sg");
             fragmentTransaction.commit();
         }
 
 
 
 
+
         super.onListItemClick(l, v, position, id);
     }
+
 
 
     @Override
@@ -91,7 +103,6 @@ public class Eq_Machienegun extends ListFragment  {
 
 
     }
-
 
 
 

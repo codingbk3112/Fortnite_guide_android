@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -18,7 +18,7 @@ import com.example.mcolv.fortnite_guide_android.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Eq_Snipe_semiauto extends Fragment {
+public class Eq_Pistol_silenced extends Fragment {
 
 
     @Override
@@ -32,7 +32,7 @@ public class Eq_Snipe_semiauto extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         ImageView gunpic = view.findViewById(R.id.pic_above_table);
-        gunpic.setImageResource(R.drawable.snipe_semiauto);                //sets the sg_pump as the picture
+        gunpic.setImageResource(R.drawable.pistol_scilenced);                //sets the sg_pump as the picture
 
         TableLayout statTable = view.findViewById(R.id.stat_table);
 
@@ -47,29 +47,29 @@ public class Eq_Snipe_semiauto extends Fragment {
         }
 
         TextView gunlabel = view.findViewById(R.id.Gun_name);
-        gunlabel.setText("Semi-Auto Sniper");
+        gunlabel.setText("Silenced Pistol");
 
         TableEditor editor = new TableEditor(statTable,getContext());  // made this object to make data easy to edit
         //Grey: Common, Green: Uncommon, Blue: Rare, Purple: Epic, Orange: Legendary
         String[] textInColumn = {
                 "E",      // title for column
-                "63",      //Damage
-                "157.5",      //Headshot damage
-                "1.2",      //Fire Rate
-                "2.5",      //Reload Time
-                "75.6",      //DPS
-                "10",      //Mag Size
+                "26",      //Damage
+                "65",      //Headshot damage
+                "6.75",      //Fire Rate
+                "1.3",      //Reload Time
+                "175.5",      //DPS
+                "16",      //Mag Size
 
         };
         editor.add_column(textInColumn,R.color.weapon_purple);
 
         textInColumn[0]="L";      // title for column
-        textInColumn[1]="66";     //Damage
-        textInColumn[2]="165";     //Headshot damage
-        textInColumn[3]="1.2";     //Fire Rate
-        textInColumn[4]="2.3";      //Reload Time
-        textInColumn[5]="79.2";     //DPS
-        textInColumn[6]="10";      //Mag Size
+        textInColumn[1]="28";     //Damage
+        textInColumn[2]="70";     //Headshot damage
+        textInColumn[3]="6.75";     //Fire Rate
+        textInColumn[4]="1.3";      //Reload Time
+        textInColumn[5]="189";     //DPS
+        textInColumn[6]="16";      //Mag Size
         editor.add_column(textInColumn,R.color.weapon_gold);
 
 

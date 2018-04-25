@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -37,14 +37,14 @@ public class Eq_AR extends ListFragment  {
                 "Scoped Rife",
                 "Scar"
         };
-        Integer[] imagesids = {
-                R.drawable.ar_m16, // your links to drawables jish is working on
+        Integer[] image_ids = {
+                R.drawable.ar_m16, // your links to drawables josh is working on
                 R.drawable.ar_burst,
                 R.drawable.ar_scoped,
                 R.drawable.ar_scar,
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;

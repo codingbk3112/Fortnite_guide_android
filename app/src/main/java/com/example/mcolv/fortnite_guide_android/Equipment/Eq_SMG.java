@@ -1,4 +1,4 @@
-package com.example.mcolv.fortnite_guide_android.Equiptment;
+package com.example.mcolv.fortnite_guide_android.Equipment;
 
 
 import android.os.Bundle;
@@ -29,7 +29,7 @@ public class Eq_SMG extends ListFragment  {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootview = inflater.inflate(R.layout.eq_fragment,container, false);  // replace with your layout xml
-        //look at equiptment_fragment.xml yours will be a copy
+        //look at equipment_fragment.xml yours will be a copy
 
         String[] titles = {
                 //your menu titles
@@ -37,12 +37,12 @@ public class Eq_SMG extends ListFragment  {
                 "Silenced SMG"
 
         };
-        Integer[] imagesids = {
-                R.drawable.smg_tatical, // your links to drawables jish is working on
+        Integer[] image_ids = {
+                R.drawable.smg_tatical, // your links to drawables josh is working on
                 R.drawable.smg_scilenced
         };
 
-        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,imagesids); //same call here
+        ArrayAdapter<String> adapter = new Eq_Adapter(getContext(),titles,image_ids); //same call here
         setListAdapter(adapter);
 
         return rootview;
@@ -62,7 +62,7 @@ public class Eq_SMG extends ListFragment  {
                 smg_menu = new Eq_SMG_tatical();
                 break;
             case 1:
-                smg_menu = new Eq_SMG_scilenced();
+                smg_menu = new Eq_SMG_silenced();
                 break;
             case 2:
 
@@ -96,6 +96,6 @@ public class Eq_SMG extends ListFragment  {
     }
 
 
-    public static class Eq_SG_tatical {
+    public static class Eq_SG_tactical {
     }
 }
