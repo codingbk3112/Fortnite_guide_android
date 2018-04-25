@@ -54,7 +54,7 @@ public class Eq_AR_Scar extends Fragment {
                 "35",      //Damage
                 "70",      //Headshot damage
                 "5.5",      //Fire Rate
-                "2.1",      //Reload Time
+                "2.2",      //Reload Time
                 "192.5",      //DPS
                 "30",      //Mag Size
 

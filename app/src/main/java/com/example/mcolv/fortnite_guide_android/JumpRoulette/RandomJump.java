@@ -57,7 +57,7 @@ public class RandomJump extends Fragment {
 
                     dropspot = land_spots.get_random_zone();
 
-                    Toast.makeText(context,dropspot.get_title(),Toast.LENGTH_LONG).show();
+                    //Toast.makeText(context,dropspot.get_title(),Toast.LENGTH_LONG).show();
                     animate_marker(mapMarker, dropspot.get_x(), dropspot.get_y(),context); // x and y given in dp
 
 

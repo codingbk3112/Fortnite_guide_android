@@ -56,7 +56,7 @@ public class Eq_Heal extends ListFragment  {
         Vibrator listpress = (Vibrator) getActivity().getApplicationContext().getSystemService(VIBRATOR_SERVICE); // button vibration
         listpress.vibrate(50); // button vibration
 
-        Fragment healing_menu = null;
+        Fragment Healing_menu = null;
 
         switch (position){
 
@@ -65,6 +65,7 @@ public class Eq_Heal extends ListFragment  {
                 break;
 
             case 1:
+
                 //medkit launch
                 break;
 
@@ -77,12 +78,12 @@ public class Eq_Heal extends ListFragment  {
                 break;
         }
 
-        if(healing_menu!=null){
+        if(Healing_menu!=null){
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
-            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),healing_menu);
-            fragmentTransaction.addToBackStack("assaultRifle_fragment");
+            fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),Healing_menu);
+            fragmentTransaction.addToBackStack("Healing_fragment");
             fragmentTransaction.commit();
         }
 
