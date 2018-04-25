@@ -19,6 +19,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <ImageView
+        android:contentDescription="Fortnite Picture"
         android:id="@+id/fortnite_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

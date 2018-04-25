@@ -19,6 +19,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:contentDescription="FNG Picture"
             android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
