@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <id name="Equipment_menu" type="id" ></id>
-    <id name="random_wheel" type="id"></id>
-    <id name="guides"  type="id" ></id>
-    <id name="share"  type="id" ></id>
-
 </resources>
