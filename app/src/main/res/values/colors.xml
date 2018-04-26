@@ -16,6 +16,7 @@
     <color name="weapon_gold">#bd9e1c</color>
 
     <color name="table_divider">#000000</color>
-    <color name="table_first_column_background">#dbdbdb</color>
+    <color name="table_first_column_background">#fff</color>
     <color name="table_text_color">#000000</color>
+    <color name="table_screen_background_color">#fff</color>
 </resources>

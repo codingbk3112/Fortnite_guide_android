@@ -9,8 +9,11 @@
     <dimen name="fragment_top_margin">16dp</dimen>
     <dimen name="equipment_screen_txt_size">30sp</dimen>
     <dimen name="equipment_screen_images_width_and_height">200dp</dimen>
-    <dimen name="table_text_size">25sp</dimen>
-    <dimen name="table_num_size">25sp</dimen>
+
+    <dimen name="table_text_size">20sp</dimen>
+    <dimen name="table_num_size">20sp</dimen>
     <dimen name="table_divider_thickness">2dp</dimen>
+    <dimen name="chart_words">8dp</dimen>
+    <dimen name="gun_name">30sp</dimen>
 
 </resources>

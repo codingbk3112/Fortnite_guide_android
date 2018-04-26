@@ -24,7 +24,7 @@
     <string name="Smg_button_name">SMGs</string>
 
 
-    <string name="table_header"><b><u> Stats </u></b></string>
+    <string name="table_header"><b> Stats </b></string>
     <string name="table_damage"> Damage </string>
     <string name="table_fire_rate"> Fire Rate </string>
     <string name="table_head_shot"> Head shot </string>
