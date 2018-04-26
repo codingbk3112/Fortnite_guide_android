@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/equipment_menus_color"
+    android:background="@color/table_screen_background_color"
     tools:context=".Equipment.Eq_SG_Pump"
     >
 
@@ -17,9 +17,10 @@
         android:contentDescription="Gun Picture"
         android:id="@+id/pic_above_table"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="275dp"
+        android:background="@color/equipment_menus_color"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
         android:adjustViewBounds="true"
         android:src="@drawable/sg_pump"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,12 +30,20 @@
 
     <TableLayout
         android:id="@+id/stat_table"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/table_divider"
+        android:gravity="center"
         android:stretchColumns="*"
-        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/table_divider">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gun_name"
+        app:layout_constraintVertical_bias="0.5">
 
 
         <View
@@ -45,8 +54,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="28dp">
 
 
             <TextView
@@ -54,12 +62,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
-                android:gravity="center"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_header"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
-
 
 
         </TableRow>
@@ -72,8 +80,7 @@
         <TableRow
 
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-           >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -81,19 +88,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_damage"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
 
-
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -101,19 +108,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_head_shot"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
 
-
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -121,19 +128,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_fire_rate"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
 
 
-
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -141,7 +148,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_reload_time"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
@@ -151,8 +160,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -160,7 +168,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_Dps"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
@@ -170,8 +180,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -179,7 +188,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/table_divider_thickness"
                 android:layout_marginEnd="@dimen/table_divider_thickness"
+                android:layout_marginStart="@dimen/table_divider_thickness"
                 android:background="@color/table_first_column_background"
+                android:paddingLeft="@dimen/chart_words"
                 android:text="@string/table_Mag_size"
                 android:textColor="@color/table_text_color"
                 android:textSize="@dimen/table_text_size" />
@@ -194,17 +205,14 @@
         android:id="@+id/Gun_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:text="Gun"
         android:textColor="@color/table_text_color"
         android:textSize="@dimen/table_text_size"
-        android:text="Gun"
-        app:layout_constraintBottom_toTopOf="@+id/stat_table"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="302dp" />
 
     <ImageView
+
         android:contentDescription="Plus Button Picture"
         android:id="@+id/plusbutton"
         android:layout_width="66dp"
@@ -212,7 +220,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:src="@drawable/plus_button"
+
         app:layout_constraintBottom_toTopOf="@+id/Gun_name"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.498"
