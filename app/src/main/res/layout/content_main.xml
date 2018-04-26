@@ -9,6 +9,7 @@
     tools:showIn="@layout/app_bar_main"
     android:id="@+id/screen_area">
 
+
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -23,18 +24,35 @@
             android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="8dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/fngicon" />
+            app:srcCompat="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/main_screen_eq_button"
+            android:layout_width="@dimen/main_screen_button_width"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:text="@string/welcome_and_contact_info"
-            android:textColor="@color/colorText" />
+            android:text="@string/equipment_tab"
+            android:layout_marginTop="@dimen/main_screen_button_spacing"/>
+        <Button
+
+            android:id="@+id/main_screen_jump_roulette"
+            android:layout_width="@dimen/main_screen_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Jump_roulette_tab"
+            android:layout_marginTop="@dimen/main_screen_button_spacing"/>
+        <Button
+
+            android:id="@+id/main_screen_weapon_compare"
+            android:layout_width="@dimen/main_screen_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Weapon_compare_Tab"
+            android:layout_marginTop="@dimen/main_screen_button_spacing"/>
+
+
 
 
     </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.mcolv.fortnite_guide_android;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -13,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.mcolv.fortnite_guide_android.Equipment.Eq;
 import com.example.mcolv.fortnite_guide_android.JumpRoulette.RandomJump;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setVisibility(View.INVISIBLE);
 
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -38,6 +42,52 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Button equiptment = findViewById(R.id.main_screen_eq_button);
+        Button weaponcompare = findViewById(R.id.main_screen_weapon_compare);
+        Button jumproulette = findViewById(R.id.main_screen_jump_roulette);
+
+
+        equiptment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                fragment = new Eq();
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
+                fragmentTransaction.replace(R.id.screen_area,fragment);
+                fragmentTransaction.addToBackStack("fragment");
+                fragmentTransaction.commit();
+            }
+
+        });
+
+
+
+        jumproulette.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment = new RandomJump();
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_to_left,R.anim.enter_from_left,R.anim.exit_to_right);
+                fragmentTransaction.replace(R.id.screen_area,fragment);
+                fragmentTransaction.addToBackStack("fragment");
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        weaponcompare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),weapon_compare.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -79,7 +129,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-    Fragment fragment=null;
+    private Fragment fragment=null;
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
